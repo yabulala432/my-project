@@ -1,9 +1,9 @@
 import React from "react";
-import { StyleSheet } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import Login from "../screens/Login";
-import Register from "../screens/Register";
+import ForgotPassword from "../screens/ForgotPassword";
+import SignIn from "../screens/SignIn";
+import SignUp from "../screens/SignUp";
 import ScreenNames from "./ScreenNames";
 
 const Stack = createStackNavigator();
@@ -16,8 +16,12 @@ const StackNavLogin = () => {
       }}
       initialRouteName="Login"
     >
-      <Stack.Screen name={ScreenNames.LOGIN} component={Login} />
-      <Stack.Screen name={ScreenNames.REGISTER} component={Register} />
+      <Stack.Screen name={ScreenNames.SIGNIN} component={SignIn} />
+      <Stack.Screen name={ScreenNames.REGISTER} component={SignUp} />
+      <Stack.Screen
+        name={ScreenNames.FORGOT_PASSWORD}
+        component={ForgotPassword}
+      />
     </Stack.Navigator>
   );
 };

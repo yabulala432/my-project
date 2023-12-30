@@ -10,11 +10,11 @@ import Screen from "../components/Screen";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import ScreenNames from "../navigation/ScreenNames";
 
-interface RegisterProps {
+interface SignUpProps {
   navigation: any;
 }
 
-const Register = ({ navigation }: RegisterProps) => {
+const SignUp = ({ navigation }: SignUpProps) => {
   return (
     <ScrollView
       style={{
@@ -25,7 +25,7 @@ const Register = ({ navigation }: RegisterProps) => {
       <Screen style={styles.imageContainer}>
         <View style={styles.innerContainer}>
           <Image source={require("../designs/register.png")} />
-          <AppText style={styles.title}>Register</AppText>
+          <AppText style={styles.title}>Sign-up</AppText>
 
           <View>
             <IconButton
@@ -67,7 +67,7 @@ const Register = ({ navigation }: RegisterProps) => {
                 alignItems: "center",
                 marginVertical: 20,
               }}
-              onPress={() => navigation.navigate(ScreenNames.LOGIN)}
+              onPress={() => navigation.navigate(ScreenNames.SIGNIN)}
             >
               <AppText style={{ color: colors.grey }}>
                 Already have an account? Login
@@ -123,4 +123,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Register;
+export default SignUp;

@@ -3,7 +3,6 @@ import {
   Image,
   Platform,
   ScrollView,
-  StatusBar,
   StyleSheet,
   TouchableOpacity,
   View,
@@ -12,15 +11,15 @@ import {
 import AppButton from "../components/AppButton";
 import AppText from "../components/AppText";
 import AppTextInput from "../components/AppTextInput";
-import Screen from "../components/Screen";
 import colors from "../config/colors";
+import Screen from "../components/Screen";
 import ScreenNames from "../navigation/ScreenNames";
 
-interface LoginProps {
+interface ForgotPasswordProps {
   navigation: any;
 }
 
-const Login = ({ navigation }: LoginProps) => {
+const ForgotPassword = ({ navigation }: ForgotPasswordProps) => {
   return (
     <ScrollView
       style={{
@@ -30,48 +29,29 @@ const Login = ({ navigation }: LoginProps) => {
     >
       <Screen style={styles.imageContainer}>
         <View style={styles.innerContainer}>
-          <Image source={require("../designs/login.png")} />
-          <AppText style={styles.title}>Login</AppText>
-
+          <Image source={require("../designs/forgotPassword.png")} />
           <View style={styles.inputsContainer}>
+            <AppText style={styles.title}>Forgot Password</AppText>
             <AppText style={styles.text}>Email: </AppText>
             <AppTextInput icon="email" placeholder="me@example.com" />
-
-            <AppText style={styles.text}>Password: </AppText>
-            <AppTextInput
-              icon="lock"
-              placeholder="********"
-              secureTextEntry={true}
-            />
-
-            <TouchableOpacity
-              style={{
-                width: "100%",
-                alignItems: "flex-end",
-                // backgroundColor: "red",
-                // height: 20,
-              }}
-            >
-              <AppText style={{ color: colors.grey }}>Forgot Password?</AppText>
-            </TouchableOpacity>
 
             <View style={styles.buttonContainer}>
               <AppButton
                 style={styles.button}
                 onPress={() => {}}
-                title="Login"
+                title="Submit"
               />
             </View>
 
             <TouchableOpacity
               style={{
                 width: "100%",
-                alignItems: "center",
+                alignSelf: "center",
               }}
-              onPress={() => navigation.navigate(ScreenNames.REGISTER)}
+              onPress={() => navigation.navigate(ScreenNames.SIGNIN)}
             >
               <AppText style={{ color: colors.grey, marginTop: 20 }}>
-                Don't have an account? Register
+                Back to Login
               </AppText>
             </TouchableOpacity>
           </View>
@@ -87,18 +67,16 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 50,
     borderBottomRightRadius: 50,
     flex: 1,
-    justifyContent: "center",
-    padding: 20,
     height: "100%",
+    justifyContent: "center",
     width: "100%",
   },
   innerContainer: {
-    alignItems: "center",
     borderRadius: 10,
-    justifyContent: "center",
   },
   inputsContainer: {
-    width: 300,
+    paddingHorizontal: 20,
+    width: "100%",
   },
   container: {},
   buttonContainer: {},
@@ -111,9 +89,10 @@ const styles = StyleSheet.create({
   },
   title: {
     color: colors.white,
-    fontSize: 60,
+    fontSize: 35,
     fontWeight: "bold",
     fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",
+    paddingVertical: 20,
   },
   text: {
     color: colors.tertiary,
@@ -124,4 +103,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Login;
+export default ForgotPassword;

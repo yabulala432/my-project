@@ -1,6 +1,6 @@
 export default Object.freeze({
   HOME: "Home",
-  LOGIN: "Login",
+  SIGNIN: "Login",
   REGISTER: "Register",
   FORGOT_PASSWORD: "ForgotPassword",
   PROFILE: "Profile",
