@@ -24,7 +24,7 @@ const SignIn = ({ navigation }: SignInProps) => {
     <ScrollView
       style={{
         flex: 1,
-        backgroundColor: colors.secondary,
+        backgroundColor: colors.white,
       }}
     >
       <Screen style={styles.imageContainer}>
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   inputsContainer: {
-    paddingLeft: 20,
+    paddingHorizontal: 20,
     width: "100%",
   },
   container: {},
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   title: {
-    color: colors.white,
+    color: colors.tertiary,
     fontSize: 60,
     fontWeight: "bold",
     fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",

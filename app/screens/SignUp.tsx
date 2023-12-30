@@ -19,7 +19,7 @@ const SignUp = ({ navigation }: SignUpProps) => {
     <ScrollView
       style={{
         flex: 1,
-        backgroundColor: colors.secondary,
+        backgroundColor: colors.white,
       }}
     >
       <Screen style={styles.imageContainer}>
@@ -31,8 +31,8 @@ const SignUp = ({ navigation }: SignUpProps) => {
             <IconButton
               name="camera"
               size={100}
-              backgroundColor={colors.tertiary}
-              iconColor={colors.secondary}
+              backgroundColor={colors.secondary}
+              iconColor={colors.white}
             />
           </View>
 
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   title: {
-    color: colors.white,
+    color: colors.tertiary,
     fontSize: 50,
     fontWeight: "bold",
     fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",

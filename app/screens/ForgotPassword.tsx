@@ -24,14 +24,14 @@ const ForgotPassword = ({ navigation }: ForgotPasswordProps) => {
     <ScrollView
       style={{
         flex: 1,
-        backgroundColor: colors.secondary,
+        backgroundColor: colors.white,
       }}
     >
       <Screen style={styles.imageContainer}>
         <View style={styles.innerContainer}>
           <Image source={require("../designs/forgotPassword.png")} />
           <View style={styles.inputsContainer}>
-            <AppText style={styles.title}>Forgot Password</AppText>
+            <AppText style={styles.title}>Forgot Password?</AppText>
             <AppText style={styles.text}>Email: </AppText>
             <AppTextInput icon="email" placeholder="me@example.com" />
 
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   title: {
-    color: colors.white,
+    color: colors.tertiary,
     fontSize: 35,
     fontWeight: "bold",
     fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",
