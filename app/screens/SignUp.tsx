@@ -1,5 +1,12 @@
 import React from "react";
-import { Image, Platform, ScrollView, StyleSheet, View } from "react-native";
+import {
+  Image,
+  Platform,
+  ScrollView,
+  StyleSheet,
+  TouchableOpacity,
+  View,
+} from "react-native";
 
 import AppButton from "../components/AppButton";
 import AppText from "../components/AppText";
@@ -7,7 +14,6 @@ import AppTextInput from "../components/AppTextInput";
 import colors from "../config/colors";
 import IconButton from "../components/IconButton";
 import Screen from "../components/Screen";
-import { TouchableOpacity } from "react-native-gesture-handler";
 import ScreenNames from "../navigation/ScreenNames";
 
 interface SignUpProps {
@@ -42,7 +48,7 @@ const SignUp = ({ navigation }: SignUpProps) => {
             <AppText style={styles.text}>Password: </AppText>
             <AppTextInput
               icon="lock"
-              placeholder="**********"
+              placeholder="********"
               secureTextEntry={true}
             />
             <AppText style={styles.text}>Contact Number: </AppText>
