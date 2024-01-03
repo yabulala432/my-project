@@ -16,7 +16,7 @@ import Screen from "../components/Screen";
 import ScreenNames from "../navigation/ScreenNames";
 
 interface ForgotPasswordProps {
-  navigation: any;
+  navigation?: any;
 }
 
 const ForgotPassword = ({ navigation }: ForgotPasswordProps) => {
