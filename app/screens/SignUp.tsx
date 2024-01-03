@@ -26,33 +26,27 @@ const SignUp = ({ navigation }: SignUpProps) => {
         <View style={styles.innerContainer}>
           <Image source={require("../designs/register.png")} />
           <AppText style={styles.title}>Sign-up</AppText>
-
           <View>
             <IconButton
               name="camera"
               size={100}
-              backgroundColor={colors.secondary}
+              backgroundColor={colors.quaternary}
               iconColor={colors.white}
             />
           </View>
-
           <View style={styles.inputsContainer}>
             <AppText style={styles.text}>Name: </AppText>
-            <AppTextInput icon="account" placeholder="your name" />
-
+            <AppTextInput icon="account" placeholder="Your Name" />
             <AppText style={styles.text}>Email: </AppText>
             <AppTextInput icon="email" placeholder="me@example.com" />
-
             <AppText style={styles.text}>Password: </AppText>
             <AppTextInput
               icon="lock"
-              placeholder="********"
+              placeholder="**********"
               secureTextEntry={true}
             />
-
             <AppText style={styles.text}>Contact Number: </AppText>
             <AppTextInput icon="phone" placeholder="09 11 -- -- --" />
-
             <View style={styles.buttonContainer}>
               <AppButton
                 style={styles.button}
@@ -60,7 +54,6 @@ const SignUp = ({ navigation }: SignUpProps) => {
                 title="Register"
               />
             </View>
-
             <TouchableOpacity
               style={{
                 width: "100%",

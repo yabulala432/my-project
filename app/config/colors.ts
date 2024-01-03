@@ -2,6 +2,7 @@ export default Object.freeze({
   primary: "#70B24D",
   secondary: "#d9c6f4",
   tertiary: "#00676c",
+  quaternary: "#92acef",
   black: "#000",
   white: "#fff",
   accent: "#FFC107",
