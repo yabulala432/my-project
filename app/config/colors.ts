@@ -1,7 +1,9 @@
 export default Object.freeze({
   primary: "#70B24D",
   secondary: "#d9c6f4",
-  tertiary: "#00676c",
+  tertiary: "#280f57",
+  // lightTeritiary: "#00a6a6",
+  lightTeritiary: "#43336b",
   quaternary: "#92acef",
   black: "#000",
   white: "#fff",
@@ -11,4 +13,5 @@ export default Object.freeze({
   success: "#4CAF50",
   warning: "#FFC107",
   grey: "#9DA3B4",
+  lightGrey: "#F6F6F6",
 });

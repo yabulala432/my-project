@@ -8,20 +8,20 @@ import {
 import { useState } from "react";
 
 interface ListItemProps {
-  image?: any;
   IconComponent?: any;
-  title?: string;
+  title: string;
   subtitle?: string;
   onPress?: any;
   style?: any;
+  titleStyle?: any;
 }
 
 function ListItem({
-  image,
   IconComponent,
   title,
   subtitle,
   onPress,
+  titleStyle = {},
   style = {},
 }: ListItemProps) {
   const [underlayColor, setUnderlayColor] = useState("#FEDCBA");
@@ -29,9 +29,8 @@ function ListItem({
     <TouchableHighlight underlayColor={underlayColor} onPress={onPress}>
       <View style={[styles.container, style]}>
         {IconComponent}
-        {/* {image && <View style={styles.imageContainer}>{image}</View>} */}
         <View style={styles.detailsContainer}>
-          <Text style={styles.title}>{title}</Text>
+          <Text style={[styles.title, titleStyle]}>{title}</Text>
           {subtitle && <Text style={styles.subtitle}>{subtitle}</Text>}
         </View>
       </View>

@@ -4,8 +4,8 @@ import { MaterialCommunityIcons, FontAwesome } from "@expo/vector-icons";
 
 import AppText from "../components/AppText";
 import colors from "../config/colors";
-import Screen from "../components/Screen";
 import ListItem from "../components/ListItem";
+import Screen from "../components/Screen";
 
 const Route = () => {
   const { width, height } = Dimensions.get("window");
