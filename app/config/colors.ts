@@ -14,4 +14,6 @@ export default Object.freeze({
   warning: "#FFC107",
   grey: "#9DA3B4",
   lightGrey: "#F6F6F6",
+  tomato: "#fe6e58",
+  gold: "#FFD700",
 });

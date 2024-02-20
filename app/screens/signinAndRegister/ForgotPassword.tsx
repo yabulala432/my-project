@@ -8,18 +8,18 @@ import {
   View,
 } from "react-native";
 
-import AppButton from "../components/AppButton";
-import AppText from "../components/AppText";
-import AppTextInput from "../components/AppTextInput";
-import Screen from "../components/Screen";
-import colors from "../config/colors";
-import ScreenNames from "../navigation/ScreenNames";
+import AppButton from "../../components/AppButton";
+import AppText from "../../components/AppText";
+import AppTextInput from "../../components/AppTextInput";
+import colors from "../../config/colors";
+import Screen from "../../components/Screen";
+import ScreenNames from "../../navigation/ScreenNames";
 
-interface SignInProps {
-  navigation: any;
+interface ForgotPasswordProps {
+  navigation?: any;
 }
 
-const SignIn = ({ navigation }: SignInProps) => {
+const ForgotPassword = ({ navigation }: ForgotPasswordProps) => {
   return (
     <ScrollView
       style={{
@@ -29,35 +29,17 @@ const SignIn = ({ navigation }: SignInProps) => {
     >
       <Screen style={styles.imageContainer}>
         <View style={styles.innerContainer}>
-          <Image source={require("../designs/login.png")} />
+          <Image source={require("../../designs/forgotPassword.png")} />
           <View style={styles.inputsContainer}>
-            <AppText style={styles.title}>Sign-in</AppText>
-
+            <AppText style={styles.title}>Forgot Password?</AppText>
             <AppText style={styles.text}>Email: </AppText>
             <AppTextInput icon="email" placeholder="me@example.com" />
-
-            <AppText style={styles.text}>Password: </AppText>
-            <AppTextInput
-              icon="lock"
-              placeholder="########"
-              secureTextEntry={true}
-            />
-
-            <TouchableOpacity
-              style={{
-                width: "100%",
-                alignSelf: "flex-end",
-              }}
-              onPress={() => navigation.navigate(ScreenNames.FORGOT_PASSWORD)}
-            >
-              <AppText style={{ color: colors.grey }}>Forgot Password?</AppText>
-            </TouchableOpacity>
 
             <View style={styles.buttonContainer}>
               <AppButton
                 style={styles.button}
                 onPress={() => {}}
-                title="Login"
+                title="Submit"
               />
             </View>
 
@@ -66,10 +48,10 @@ const SignIn = ({ navigation }: SignInProps) => {
                 width: "100%",
                 alignSelf: "center",
               }}
-              onPress={() => navigation.navigate(ScreenNames.REGISTER)}
+              onPress={() => navigation.navigate(ScreenNames.SIGNIN)}
             >
               <AppText style={{ color: colors.grey, marginTop: 20 }}>
-                Don't have an account? Register
+                Back to Login
               </AppText>
             </TouchableOpacity>
           </View>
@@ -85,14 +67,12 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 50,
     borderBottomRightRadius: 50,
     flex: 1,
-    justifyContent: "center",
     height: "100%",
+    justifyContent: "center",
     width: "100%",
   },
   innerContainer: {
-    alignItems: "center",
     borderRadius: 10,
-    justifyContent: "center",
   },
   inputsContainer: {
     paddingHorizontal: 20,
@@ -109,9 +89,10 @@ const styles = StyleSheet.create({
   },
   title: {
     color: colors.tertiary,
-    fontSize: 60,
+    fontSize: 35,
     fontWeight: "bold",
     fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",
+    paddingVertical: 20,
   },
   text: {
     color: colors.tertiary,
@@ -122,4 +103,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SignIn;
+export default ForgotPassword;

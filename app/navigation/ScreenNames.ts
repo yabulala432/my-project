@@ -5,4 +5,6 @@ export default Object.freeze({
   FORGOT_PASSWORD: "ForgotPassword",
   PROFILE: "Profile",
   SETTINGS: "Settings",
+  ONBOARDING: "Onboarding",
+  MAIN_SCREEN: "MainScreen",
 });

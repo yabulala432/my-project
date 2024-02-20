@@ -8,13 +8,13 @@ import {
   View,
 } from "react-native";
 
-import AppButton from "../components/AppButton";
-import AppText from "../components/AppText";
-import AppTextInput from "../components/AppTextInput";
-import colors from "../config/colors";
-import IconButton from "../components/IconButton";
-import Screen from "../components/Screen";
-import ScreenNames from "../navigation/ScreenNames";
+import AppButton from "../../components/AppButton";
+import AppText from "../../components/AppText";
+import AppTextInput from "../../components/AppTextInput";
+import colors from "../../config/colors";
+import IconButton from "../../components/IconButton";
+import Screen from "../../components/Screen";
+import ScreenNames from "../../navigation/ScreenNames";
 
 interface SignUpProps {
   navigation: any;
@@ -30,7 +30,7 @@ const SignUp = ({ navigation }: SignUpProps) => {
     >
       <Screen style={styles.imageContainer}>
         <View style={styles.innerContainer}>
-          <Image source={require("../designs/register.png")} />
+          <Image source={require("../../designs/register.png")} />
           <AppText style={styles.title}>Sign-up</AppText>
           <View>
             <IconButton
@@ -52,7 +52,7 @@ const SignUp = ({ navigation }: SignUpProps) => {
               secureTextEntry={true}
             />
             <AppText style={styles.text}>Contact Number: </AppText>
-            <AppTextInput icon="phone" placeholder="09 11 -- -- --" />
+            <AppTextInput icon="phone" placeholder="+251 -- -- -- --" />
             <View style={styles.buttonContainer}>
               <AppButton
                 style={styles.button}
