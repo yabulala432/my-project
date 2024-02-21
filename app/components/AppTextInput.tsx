@@ -20,6 +20,7 @@ interface props {
   textBreakStrategy?: any;
   underlineColorAndroid?: any;
   secureTextEntry?: boolean;
+  style?: any;
 }
 
 function AppTextInput({
@@ -33,6 +34,7 @@ function AppTextInput({
   textBreakStrategy,
   underlineColorAndroid,
   secureTextEntry,
+  style,
 }: props) {
   return (
     <View style={styles.textInputContainer}>

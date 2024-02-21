@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { createStackNavigator } from "@react-navigation/stack";
 
 import ForgotPassword from "../screens/signinAndRegister/ForgotPassword";
 import OnboardingScreen from "../screens/onboardingScreen/OnboardingScreen";
+import ScreenNames from "./ScreenNames";
 import SignIn from "../screens/signinAndRegister/SignIn";
 import SignUp from "../screens/signinAndRegister/SignUp";
-import ScreenNames from "./ScreenNames";
+import TabNavMain from "./TabNavMain";
 
 import { getItem } from "../utils/AsyncStorage";
-import TabNavMain from "./TabNavMain";
+import { createStackNavigator } from "@react-navigation/stack";
 
 const Stack = createStackNavigator();
 
@@ -21,7 +21,7 @@ const StackNavLogin = () => {
 
   const checkIfAlreadyOnboarded = async () => {
     let isOnboarded = await getItem("isOnboarded");
-    console.log({ isOnboarded });
+    // console.log({ isOnboarded }, "line StackNavLogin: 24");
     if (isOnboarded) {
       setShowOnboarding(false);
     } else {

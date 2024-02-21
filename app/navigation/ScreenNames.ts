@@ -7,4 +7,6 @@ export default Object.freeze({
   SETTINGS: "Settings",
   ONBOARDING: "Onboarding",
   MAIN_SCREEN: "MainScreen",
+  ROUTES: "Routes",
+  ALERTS: "Alerts",
 });
