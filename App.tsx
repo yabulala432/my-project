@@ -8,11 +8,15 @@ import { NavigationContainer } from "@react-navigation/native";
 import Route from "./app/screens/Route";
 import GpsTracker from "./app/screens/GpsTracker";
 import OnboardingScreen from "./app/screens/onboardingScreen/OnboardingScreen";
+import BottomTabNavigator from "./app/navigation/Animated/navigator/BottomTabNavigator";
 
-export default function App({ navigation }: any) {
+export default function App() {
   return (
     <NavigationContainer>
       <StackNavLogin />
+      {/* <BottomTabNavigator /> */}
     </NavigationContainer>
   );
 }
+
+//

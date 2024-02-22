@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 
+import { createStackNavigator } from "@react-navigation/stack";
+
+import BottomTabNavigator from "./Animated/navigator/BottomTabNavigator";
 import ForgotPassword from "../screens/signinAndRegister/ForgotPassword";
 import OnboardingScreen from "../screens/onboardingScreen/OnboardingScreen";
 import ScreenNames from "./ScreenNames";
 import SignIn from "../screens/signinAndRegister/SignIn";
 import SignUp from "../screens/signinAndRegister/SignUp";
-import TabNavMain from "./TabNavMain";
 
 import { getItem } from "../utils/AsyncStorage";
-import { createStackNavigator } from "@react-navigation/stack";
 
 const Stack = createStackNavigator();
 
@@ -21,7 +22,6 @@ const StackNavLogin = () => {
 
   const checkIfAlreadyOnboarded = async () => {
     let isOnboarded = await getItem("isOnboarded");
-    // console.log({ isOnboarded }, "line StackNavLogin: 24");
     if (isOnboarded) {
       setShowOnboarding(false);
     } else {
@@ -43,7 +43,10 @@ const StackNavLogin = () => {
           name={ScreenNames.FORGOT_PASSWORD}
           component={ForgotPassword}
         />
-        <Stack.Screen name={ScreenNames.MAIN_SCREEN} component={TabNavMain} />
+        <Stack.Screen
+          name={ScreenNames.MAIN_SCREEN}
+          component={BottomTabNavigator}
+        />
       </Stack.Navigator>
     );
   } else if (showOnboarding === null) return null;
