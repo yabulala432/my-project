@@ -14,6 +14,7 @@ import Animated, {
 } from "react-native-reanimated";
 import BottomTabIcon from "./BottomTabIcon";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import colors from "../../../config/colors";
 
 const CustomBottomTab = ({
   state,
@@ -87,14 +88,14 @@ const CustomBottomTab = ({
           >
             <View style={styles.contentContainer}>
               <BottomTabIcon route={route.name} isFocused={isFocused} />
-              <Text
+              {/* <Text
                 style={{
                   color: isFocused ? "black" : "white",
                   fontSize: 12,
                 }}
               >
                 {route.name}
-              </Text>
+              </Text> */}
             </View>
           </Pressable>
         );
@@ -107,27 +108,17 @@ export default CustomBottomTab;
 
 const styles = StyleSheet.create({
   tabBarContainer: {
-    // flex: 1,
     flexDirection: "row",
-    height: 75,
-    // position: "absolute",
-    // bottom: 0,
+    height: 70,
+    position: "relative",
+    bottom: 0,
     alignSelf: "center",
-    backgroundColor: "black",
+    backgroundColor: colors.primary,
     borderTopLeftRadius: 60,
     borderRadius: 60,
     alignItems: "center",
     justifyContent: "space-around",
     overflow: "hidden",
-    // make the container stick to the bottom
-    position: "absolute",
-    bottom: 0,
-    left: 0,
-    right: 0,
-    // how can i make the container to be hidden by keyboard
-    // when the keyboard is open i should use
-    // KeyboardAvoidingView where?
-    // but how ??
   },
   slidingTabContainer: {
     ...StyleSheet.absoluteFillObject,

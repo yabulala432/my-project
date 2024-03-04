@@ -3,6 +3,8 @@ import { View } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import ScreenNames from "../../ScreenNames";
 
+import colors from "../../../config/colors";
+
 interface Props {
   route: any;
   isFocused: boolean;
@@ -20,7 +22,7 @@ const BottomTabIcon = ({ route, isFocused }: Props) => {
           <MaterialCommunityIcons
             name="home"
             size={isFocused ? width * 1.1 : width}
-            color={isFocused ? "black" : "white"}
+            color={isFocused ? colors.primary : "white"}
           />
         );
       }
@@ -29,7 +31,7 @@ const BottomTabIcon = ({ route, isFocused }: Props) => {
           <MaterialCommunityIcons
             name="map-legend"
             size={isFocused ? width * 1.1 : width}
-            color={isFocused ? "black" : "white"}
+            color={isFocused ? colors.primary : "white"}
           />
         );
       case ScreenNames.ALERTS:
@@ -37,7 +39,7 @@ const BottomTabIcon = ({ route, isFocused }: Props) => {
           <MaterialCommunityIcons
             name="bell"
             size={isFocused ? width * 1.1 : width}
-            color={isFocused ? "black" : "white"}
+            color={isFocused ? colors.primary : "white"}
           />
         );
       case ScreenNames.PROFILE:
@@ -45,7 +47,7 @@ const BottomTabIcon = ({ route, isFocused }: Props) => {
           <MaterialCommunityIcons
             name="account"
             size={isFocused ? width * 1.1 : width}
-            color={isFocused ? "black" : "white"}
+            color={isFocused ? colors.primary : "white"}
           />
         );
       default:

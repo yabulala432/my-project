@@ -32,16 +32,15 @@ const BottomTabNavigator = () => {
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: false,
-        tabBarStyle: {
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          right: 0,
-          backgroundColor: "rgba(255, 255, 255, 0.8)",
-          elevation: 0,
-          borderTopWidth: 0,
-        },
-        // sticky: true,
+        // tabBarStyle: {
+        //   // position: "absolute",
+        //   // bottom: 0,
+        //   // left: 0,
+        //   // right: 0,
+        //   // backgroundColor: "rgba(255, 255, 255, 0.8)",
+        //   // elevation: 0,
+        //   // borderTopWidth: 0,
+        // },
       }}
     >
       <Tab.Screen name={ScreenNames.HOME} component={HomeScreen} />
