@@ -10,62 +10,55 @@ import Screen from "../components/Screen";
 const Route = () => {
   const { width, height } = Dimensions.get("window");
   return (
-    <ScrollView
-      style={{
-        flex: 1,
-        backgroundColor: colors.white,
-      }}
-    >
-      <Screen style={styles.container}>
-        <View style={styles.innerContainer}>
-          <View style={styles.imageContainer}>
-            <Image
-              style={{
-                width: width,
-                height: height * 0.7,
-                resizeMode: "stretch",
-                borderBottomLeftRadius: 0,
-              }}
-              source={require("../designs/buss_map.png")}
+    <Screen style={styles.container}>
+      <View style={styles.innerContainer}>
+        <View style={styles.imageContainer}>
+          <Image
+            style={{
+              width: width,
+              height: height * 0.7,
+              resizeMode: "stretch",
+              borderBottomLeftRadius: 0,
+            }}
+            source={require("../designs/buss_map.png")}
+          />
+        </View>
+        <View style={styles.informationContainer}>
+          <View style={styles.titleContainer}>
+            <AppText
+              color={colors.tertiary}
+              style={{ fontSize: 20, fontWeight: "bold" }}
+            >
+              213 Mali Street - From Addisu Gebeya to Megenagna
+            </AppText>
+          </View>
+          <View style={styles.boxify}>
+            <ListItem
+              title="Bus - 07"
+              subtitle="23 kms away from you"
+              IconComponent={
+                <MaterialCommunityIcons
+                  name="bus-marker"
+                  size={60}
+                  color={colors.tertiary}
+                />
+              }
+            />
+            <ListItem
+              title="Driver"
+              subtitle="Yeabsira Yonas "
+              IconComponent={
+                <FontAwesome
+                  name="drivers-license-o"
+                  size={60}
+                  color={colors.tertiary}
+                />
+              }
             />
           </View>
-          <View style={styles.informationContainer}>
-            <View style={styles.titleContainer}>
-              <AppText
-                color={colors.tertiary}
-                style={{ fontSize: 20, fontWeight: "bold" }}
-              >
-                213 Mali Street - From Addisu Gebeya to Megenagna
-              </AppText>
-            </View>
-            <View style={styles.boxify}>
-              <ListItem
-                title="Bus - 07"
-                subtitle="23 kms away from you"
-                IconComponent={
-                  <MaterialCommunityIcons
-                    name="bus-marker"
-                    size={60}
-                    color={colors.tertiary}
-                  />
-                }
-              />
-              <ListItem
-                title="Driver"
-                subtitle="Yeabsira Yonas "
-                IconComponent={
-                  <FontAwesome
-                    name="drivers-license-o"
-                    size={60}
-                    color={colors.tertiary}
-                  />
-                }
-              />
-            </View>
-          </View>
         </View>
-      </Screen>
-    </ScrollView>
+      </View>
+    </Screen>
   );
 };
 
