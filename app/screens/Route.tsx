@@ -1,10 +1,7 @@
 import React from "react";
 import { Dimensions, Image, View, StyleSheet, ScrollView } from "react-native";
-import { MaterialCommunityIcons, FontAwesome } from "@expo/vector-icons";
 
-import AppText from "../components/AppText";
 import colors from "../config/colors";
-import ListItem from "../components/ListItem";
 import Screen from "../components/Screen";
 
 const Route = () => {
@@ -23,40 +20,7 @@ const Route = () => {
             source={require("../designs/buss_map.png")}
           />
         </View>
-        <View style={styles.informationContainer}>
-          <View style={styles.titleContainer}>
-            <AppText
-              color={colors.tertiary}
-              style={{ fontSize: 20, fontWeight: "bold" }}
-            >
-              213 Mali Street - From Addisu Gebeya to Megenagna
-            </AppText>
-          </View>
-          <View style={styles.boxify}>
-            <ListItem
-              title="Bus - 07"
-              subtitle="23 kms away from you"
-              IconComponent={
-                <MaterialCommunityIcons
-                  name="bus-marker"
-                  size={60}
-                  color={colors.tertiary}
-                />
-              }
-            />
-            <ListItem
-              title="Driver"
-              subtitle="Yeabsira Yonas "
-              IconComponent={
-                <FontAwesome
-                  name="drivers-license-o"
-                  size={60}
-                  color={colors.tertiary}
-                />
-              }
-            />
-          </View>
-        </View>
+        <View style={styles.informationContainer}></View>
       </View>
     </Screen>
   );
@@ -86,15 +50,6 @@ const styles = StyleSheet.create({
   informationContainer: {
     paddingVertical: 5,
     paddingHorizontal: 20,
-  },
-  titleContainer: {
-    alignItems: "flex-start",
-    justifyContent: "center",
-    width: "100%",
-  },
-  boxify: {
-    alignItems: "flex-start",
-    width: "100%",
   },
 });
 

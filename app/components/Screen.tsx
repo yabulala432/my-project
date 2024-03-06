@@ -13,7 +13,7 @@ const Screen = ({ children, style = {} }: props) => {
       <ScrollView
         style={{
           flex: 1,
-          backgroundColor: colors.white,
+          // backgroundColor: colors.white,
         }}
       >
         {children}
